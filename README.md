@@ -1,4 +1,5 @@
-Sistema de Montagem de Computadores com Pilha
+SISTEMA DE MONTAGEM DE COMPUTADORES COM PILHA 
+
 1. Introdução
 Este projeto tem como objetivo desenvolver um Sistema de Montagem de Computadores, utilizando a estrutura de dados Pilha. O sistema será responsável por simular o processo de montagem de um computador, onde os componentes são adicionados ou removidos de forma sequencial. O sistema oferece uma interface simples para que o usuário possa inserir componentes (como placa-mãe, processador, memória RAM, etc.), removê-los ou visualizar a lista de componentes atualmente selecionados.
 
