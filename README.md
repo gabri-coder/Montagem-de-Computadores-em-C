@@ -10,6 +10,7 @@ O que o sistema faz?
 O Sistema de Montagem de Computadores permite ao usuário gerenciar a montagem de um computador de acordo com a ordem em que os componentes são inseridos na pilha. O sistema oferece funcionalidades para adicionar, remover e listar componentes, facilitando o acompanhamento da montagem. A pilha é utilizada para simular a ordem de montagem, onde o último componente adicionado é o primeiro a ser removido.
 
 Menu de Opções
+
 Ao executar o sistema, o usuário será apresentado a um menu com as seguintes opções:
 Adicionar componente - Permite que o usuário insira um componente na pilha.
 
