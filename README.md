@@ -54,7 +54,11 @@ Considerações Finais
 O Sistema de Montagem de Computadores desenvolvido é uma aplicação simples e eficaz que utiliza a estrutura de dados pilha para simular a montagem de um computador. O uso de pilha permite simular o processo de empilhamento de componentes durante a montagem e removê-los na ordem inversa (último componente a ser adicionado é o primeiro a ser removido).
 
 Melhorias Futuras:
+
 Persistência de Dados: Implementar a capacidade de salvar os componentes em um arquivo, para que o estado da montagem seja mantido entre diferentes execuções do programa.
+
 Interface Gráfica: Criar uma interface gráfica para tornar o processo de montagem mais intuitivo.
+
 Validação de Componentes: Implementar validações para garantir que os componentes inseridos sejam compatíveis entre si (por exemplo, verificar se a placa-mãe e o processador são compatíveis).
+
 Banco de Dados de Componentes: Utilizar um banco de dados para armazenar informações sobre os componentes (preço, especificações técnicas, etc.), permitindo que o usuário monte computadores mais facilmente com base em um catálogo de peças
