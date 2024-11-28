@@ -1,0 +1,107 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+#define MAX_COMPONENTES 100
+#define TAMANHO_TEXTO 256
+
+// Estrutura da Pilha
+typedef struct {
+    char componentes[MAX_COMPONENTES][TAMANHO_TEXTO];
+    int topo;
+} Pilha;
+
+// Função para inicializar a pilha
+void inicializarPilha(Pilha *pilha) {
+    pilha->topo = -1;
+}
+
+// Função para verificar se a pilha está cheia
+int pilhaCheia(Pilha *pilha) {
+    return pilha->topo == MAX_COMPONENTES - 1;
+}
+
+// Função para verificar se a pilha está vazia
+int pilhaVazia(Pilha *pilha) {
+    return pilha->topo == -1;
+}
+
+// Função para adicionar um componente na pilha
+void adicionarComponente(Pilha *pilha) {
+    if (pilhaCheia(pilha)) {
+        printf("A pilha de componentes está cheia. Não é possível adicionar mais componentes.\n");
+        return;
+    }
+    char componente[TAMANHO_TEXTO];
+    printf("Digite o nome do componente: ");
+    getchar();  // Limpar o buffer do teclado
+    fgets(componente, TAMANHO_TEXTO, stdin);
+    componente[strcspn(componente, "\n")] = '\0';  // Remover o '\n' do final da string
+    pilha->topo++;
+    strcpy(pilha->componentes[pilha->topo], componente);
+    printf("Componente adicionado: %s\n", componente);
+}
+
+// Função para remover um componente da pilha
+void removerComponente(Pilha *pilha) {
+    if (pilhaVazia(pilha)) {
+        printf("A pilha de componentes está vazia. Nenhum componente para remover.\n");
+        return;
+    }
+    printf("Componente removido: %s\n", pilha->componentes[pilha->topo]);
+    pilha->topo--;
+}
+
+// Função para listar os componentes da pilha
+void listarComponentes(Pilha *pilha) {
+    if (pilhaVazia(pilha)) {
+        printf("A pilha de componentes está vazia. Nenhum componente para listar.\n");
+        return;
+    }
+    printf("Lista de Componentes Montados:\n");
+    for (int i = pilha->topo; i >= 0; i--) {
+        printf("%d. %s\n", pilha->topo - i + 1, pilha->componentes[i]);
+    }
+}
+
+// Função para mostrar o menu
+void mostrarMenu() {
+    printf("\n- Sistema de Montagem de Computadores -\n");
+    printf("1. Adicionar componente\n");
+    printf("2. Remover componente\n");
+    printf("3. Listar componentes montados\n");
+    printf("4. Sair\n");
+    printf("================\n");
+}
+
+
+int main() {
+    Pilha pilha;
+    inicializarPilha(&pilha);
+    int opcao;
+    
+    do {
+        mostrarMenu();
+        printf(" Escolha uma opção: ");
+        scanf("%d", &opcao);
+        
+        switch (opcao) {
+            case 1:
+                adicionarComponente(&pilha);
+                break;
+            case 2:
+                removerComponente(&pilha);
+                break;
+            case 3:
+                listarComponentes(&pilha);
+                break;
+            case 4:
+                printf(" Até mais....\n");
+                break;
+            default:
+                printf(" Opção inválida. Tente novamente.\n");
+        }
+    } while (opcao != 4);
+    
+    return 0;
+}
