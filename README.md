@@ -10,15 +10,19 @@ O Sistema de Montagem de Computadores permite ao usuário gerenciar a montagem d
 Menu de Opções
 Ao executar o sistema, o usuário será apresentado a um menu com as seguintes opções:
 Adicionar componente - Permite que o usuário insira um componente na pilha.
+
 ![image](https://github.com/user-attachments/assets/d5b30ab0-dbcf-4f0a-90fa-a9aa70371276)
 
 Remover componente - Remove o componente mais recentemente adicionado (topo da pilha).
+
 ![image](https://github.com/user-attachments/assets/41b64ee9-1bdc-455e-811f-e815104792a4)
 
 Listar componentes - Exibe todos os componentes da pilha, do topo para a base.
+
 ![image](https://github.com/user-attachments/assets/513643e4-9cee-4610-8fd6-6ad2d44a9969)
 
 Sair - Encerra o programa.
+
 ![image](https://github.com/user-attachments/assets/298a5843-678b-4ce6-892f-a0e0c413493c)
 
 
